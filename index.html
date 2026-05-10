@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokemon Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Pokémon Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="dashboard">
+      <!-- decorative SVG leaves (bottom-left) -->
       <svg
         class="bg-leaf"
         viewBox="0 0 160 200"
@@ -29,6 +34,159 @@
           opacity="0.4"
         />
       </svg>
+
+      <header class="header">
+        <button class="header-btn" aria-label="Menu">
+          <i class="ri-menu-line"></i>
+        </button>
+
+        <div class="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+            alt="Pokémon"
+          />
+        </div>
+
+        <button class="header-btn" aria-label="Toggle theme">
+          <i class="ri-sun-line"></i>
+        </button>
+      </header>
+
+      <div class="search-filter">
+        <div class="search-bar">
+          <i class="ri-search-line search-icon" aria-hidden="true"></i>
+          <input type="text" placeholder="Search for a Pokémon..." />
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-btn">
+            Filter by types (1) <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <button class="sort-btn" aria-label="Sort">
+            <i class="ri-sort-desc"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="pokemon-card card-grass">
+          <span class="card-number">#0908</span>
+          <div class="card-fav" title="Favourite">
+            <i class="ri-heart-line"></i>
+          </div>
+          <span class="card-type-dot">🌿</span>
+
+          <img
+            class="card-image"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png"
+            alt="Meowscarada"
+          />
+          <h3 class="card-name">Meowscarada</h3>
+          <div class="card-footer">
+            <span class="type-badge badge-grass">🌿 Grass</span>
+            <div class="arrow-btn"><i class="ri-arrow-right-line"></i></div>
+          </div>
+        </div>
+
+        <div class="pokemon-card card-dark-steel">
+          <span class="card-number">#0624</span>
+          <div class="card-fav" title="Favourite">
+            <i class="ri-heart-line"></i>
+          </div>
+          <span class="card-type-dot">⚙️</span>
+
+          <img
+            class="card-image"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/624.png"
+            alt="Pawniard"
+          />
+          <h3 class="card-name">Pawniard</h3>
+          <div class="card-footer">
+            <span class="type-badge badge-dark">⚙️ Dark / Steel</span>
+            <div class="arrow-btn"><i class="ri-arrow-right-line"></i></div>
+          </div>
+        </div>
+
+        <div class="pokemon-card card-dark-fire">
+          <span class="card-number">#0229</span>
+          <div class="card-fav" title="Favourite">
+            <i class="ri-heart-line"></i>
+          </div>
+          <span class="card-type-dot">🔥</span>
+
+          <img
+            class="card-image"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png"
+            alt="Houndoom"
+          />
+          <h3 class="card-name">Houndoom</h3>
+          <div class="card-footer">
+            <span class="type-badge badge-fire">🔥 Dark / Fire</span>
+            <div class="arrow-btn"><i class="ri-arrow-right-line"></i></div>
+          </div>
+        </div>
+
+        <div class="pokemon-card card-dark-psychic">
+          <span class="card-number">#0686</span>
+          <div class="card-fav" title="Favourite">
+            <i class="ri-heart-line"></i>
+          </div>
+          <span class="card-type-dot">💧</span>
+
+          <img
+            class="card-image"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/686.png"
+            alt="Inkay"
+          />
+          <h3 class="card-name">Inkay</h3>
+          <div class="card-footer">
+            <span class="type-badge badge-psychic">💧 Dark / Psychic</span>
+            <div class="arrow-btn"><i class="ri-arrow-right-line"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon fi-blue">
+            <i class="ri-focus-3-line"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Explore</h4>
+            <p>Discover all your favorite Pokémon</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon fi-green">
+            <i class="ri-filter-3-line"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Filter</h4>
+            <p>Find Pokémon by types and abilities</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon fi-amber"><i class="ri-star-line"></i></div>
+          <div class="feature-text">
+            <h4>Collection</h4>
+            <p>Save and manage your collection</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon fi-purple">
+            <i class="ri-bar-chart-grouped-line"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Stats</h4>
+            <p>View stats and learn about Pokémon</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <i class="ri-record-circle-line"></i>
+        <p>© 2024 Pokémon. All rights reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
